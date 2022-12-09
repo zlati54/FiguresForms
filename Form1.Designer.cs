@@ -36,7 +36,7 @@
             // btnRectangle
             // 
             this.btnRectangle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRectangle.Location = new System.Drawing.Point(71, 388);
+            this.btnRectangle.Location = new System.Drawing.Point(35, 455);
             this.btnRectangle.Name = "btnRectangle";
             this.btnRectangle.Size = new System.Drawing.Size(75, 23);
             this.btnRectangle.TabIndex = 0;
@@ -47,7 +47,7 @@
             // btnTriangle
             // 
             this.btnTriangle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTriangle.Location = new System.Drawing.Point(217, 395);
+            this.btnTriangle.Location = new System.Drawing.Point(162, 455);
             this.btnTriangle.Name = "btnTriangle";
             this.btnTriangle.Size = new System.Drawing.Size(75, 23);
             this.btnTriangle.TabIndex = 1;
@@ -58,7 +58,7 @@
             // btnCircle
             // 
             this.btnCircle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCircle.Location = new System.Drawing.Point(366, 394);
+            this.btnCircle.Location = new System.Drawing.Point(282, 455);
             this.btnCircle.Name = "btnCircle";
             this.btnCircle.Size = new System.Drawing.Size(75, 23);
             this.btnCircle.TabIndex = 2;
@@ -70,10 +70,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(912, 512);
             this.Controls.Add(this.btnCircle);
             this.Controls.Add(this.btnTriangle);
             this.Controls.Add(this.btnRectangle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";

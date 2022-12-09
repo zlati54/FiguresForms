@@ -48,6 +48,20 @@ namespace FiguresForms
         public void RectangleThread()
         {
 
+            while (true)
+            {
+                Random random = new Random();
+                Pen pen = new Pen(Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255)));
+                Graphics g = this.CreateGraphics();
+                int cordHeight = random.Next(0, this.Height - 155);
+                int cordWidth = random.Next(0, this.Width - 155);
+                int sizeHeight = random.Next(50, 150);
+                int sizeWidth = random.Next(50, 150);
+                g.DrawRectangle(pen, cordWidth, cordHeight, sizeWidth, sizeHeight);
+                Thread.Sleep(3000);
+            }
+            
+
 
         }
 
