@@ -23,6 +23,13 @@ namespace FiguresForms
             thread2.Start();
 
         }
+
+        private void btnCircle_Click(object sender, EventArgs e)
+        {
+            thread3 = new Thread(CircleThread);
+            thread3.Start();
+        }
+
         public void TriangleThread()
         {
             while (true)
@@ -40,8 +47,20 @@ namespace FiguresForms
                 Thread.Sleep(2000);
             }
         }
-        private void btnCircle_Click(object sender, EventArgs e)
+        public void CircleThread()
         {
+            while (true)
+            {
+                Random random = new Random();
+                Pen pen = new Pen(Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255)));
+                Graphics g = this.CreateGraphics();
+                int cordHeight = random.Next(0, this.Height - 155);
+                int cordWidth = random.Next(0, this.Width - 155);
+                int sizeHeight = random.Next(50, 150);
+                int sizeWidth = random.Next(50, 150);
+                g.DrawEllipse(pen, cordWidth, cordHeight, sizeWidth, sizeHeight);
+                Thread.Sleep(4000);
+            }
 
         }
 
