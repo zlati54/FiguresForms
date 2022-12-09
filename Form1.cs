@@ -37,7 +37,7 @@ namespace FiguresForms
                 Graphics g = this.CreateGraphics();
                 Point[] trianglePoints = { new Point(sizeWidth + random.Next(150, 250), sizeHeight), new Point(cordWidth, cordHeight), new Point(sizeWidth, sizeHeight) };
                 g.DrawPolygon(pen, trianglePoints);
-                Thread.Sleep(200);
+                Thread.Sleep(2000);
             }
         }
         private void btnCircle_Click(object sender, EventArgs e)
