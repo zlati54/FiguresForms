@@ -36,7 +36,7 @@
             // btnRectangle
             // 
             this.btnRectangle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRectangle.Location = new System.Drawing.Point(35, 455);
+            this.btnRectangle.Location = new System.Drawing.Point(12, 465);
             this.btnRectangle.Name = "btnRectangle";
             this.btnRectangle.Size = new System.Drawing.Size(75, 23);
             this.btnRectangle.TabIndex = 0;
@@ -47,7 +47,7 @@
             // btnTriangle
             // 
             this.btnTriangle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTriangle.Location = new System.Drawing.Point(162, 455);
+            this.btnTriangle.Location = new System.Drawing.Point(102, 465);
             this.btnTriangle.Name = "btnTriangle";
             this.btnTriangle.Size = new System.Drawing.Size(75, 23);
             this.btnTriangle.TabIndex = 1;
@@ -58,7 +58,7 @@
             // btnCircle
             // 
             this.btnCircle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCircle.Location = new System.Drawing.Point(282, 455);
+            this.btnCircle.Location = new System.Drawing.Point(192, 465);
             this.btnCircle.Name = "btnCircle";
             this.btnCircle.Size = new System.Drawing.Size(75, 23);
             this.btnCircle.TabIndex = 2;
