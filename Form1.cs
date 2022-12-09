@@ -16,11 +16,12 @@ namespace FiguresForms
             thread1.Start();
 
         }
-
+        
         private void btnTriangle_Click(object sender, EventArgs e)
         {
 
             Random random = new Random();
+            
             Pen pen = new Pen(Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255)));
             Graphics g = this.CreateGraphics();
             Point[] trianglePoints = { new Point(50, 50), new Point(200, 50), new Point(125, 200) };
