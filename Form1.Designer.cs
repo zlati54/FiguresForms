@@ -31,6 +31,7 @@
             this.btnRectangle = new System.Windows.Forms.Button();
             this.btnTriangle = new System.Windows.Forms.Button();
             this.btnCircle = new System.Windows.Forms.Button();
+            this.lblNumberOfFigures = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRectangle
@@ -66,11 +67,21 @@
             this.btnCircle.UseVisualStyleBackColor = true;
             this.btnCircle.Click += new System.EventHandler(this.btnCircle_Click);
             // 
+            // lblNumberOfFigures
+            // 
+            this.lblNumberOfFigures.AutoSize = true;
+            this.lblNumberOfFigures.Location = new System.Drawing.Point(340, 469);
+            this.lblNumberOfFigures.Name = "lblNumberOfFigures";
+            this.lblNumberOfFigures.Size = new System.Drawing.Size(99, 15);
+            this.lblNumberOfFigures.TabIndex = 3;
+            this.lblNumberOfFigures.Text = "Rendered figures:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 512);
+            this.Controls.Add(this.lblNumberOfFigures);
             this.Controls.Add(this.btnCircle);
             this.Controls.Add(this.btnTriangle);
             this.Controls.Add(this.btnRectangle);
@@ -79,6 +90,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -87,5 +99,6 @@
         private Button btnRectangle;
         private Button btnTriangle;
         private Button btnCircle;
+        private Label lblNumberOfFigures;
     }
 }

@@ -5,9 +5,15 @@ namespace FiguresForms
         Thread thread1;
         Thread thread2;
         Thread thread3;
+        int shapesNumber = 0;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public void SetShapesNumber()
+        {
+            lblNumberOfFigures.Text = "Rendered figures: " + shapesNumber;
         }
 
         private void btnRectangle_Click(object sender, EventArgs e)
@@ -44,6 +50,8 @@ namespace FiguresForms
                 Graphics g = this.CreateGraphics();
                 Point[] trianglePoints = { new Point(Math.Max(0, cordWidth - random.Next(150, 250)), sizeHeight), new Point(cordWidth, cordHeight), new Point(sizeWidth, sizeHeight) };
                 g.DrawPolygon(pen, trianglePoints);
+                shapesNumber++;
+                SetShapesNumber();
                 Thread.Sleep(2000);
             }
         }
@@ -59,6 +67,8 @@ namespace FiguresForms
                 int sizeHeight = random.Next(50, 150);
                 int sizeWidth = random.Next(50, 150);
                 g.DrawEllipse(pen, cordWidth, cordHeight, sizeWidth, sizeHeight);
+                shapesNumber++;
+                SetShapesNumber();
                 Thread.Sleep(4000);
             }
 
@@ -77,6 +87,8 @@ namespace FiguresForms
                 int sizeHeight = random.Next(50, 150);
                 int sizeWidth = random.Next(50, 150);
                 g.DrawRectangle(pen, cordWidth, cordHeight, sizeWidth, sizeHeight);
+                shapesNumber++;
+                SetShapesNumber();
                 Thread.Sleep(3000);
             }
 
