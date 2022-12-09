@@ -41,6 +41,7 @@
             this.btnRectangle.TabIndex = 0;
             this.btnRectangle.Text = "rectangle";
             this.btnRectangle.UseVisualStyleBackColor = true;
+            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
             // 
             // btnTriangle
             // 
@@ -50,6 +51,7 @@
             this.btnTriangle.TabIndex = 1;
             this.btnTriangle.Text = "triangle";
             this.btnTriangle.UseVisualStyleBackColor = true;
+            this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
             // 
             // btnCircle
             // 
@@ -59,6 +61,7 @@
             this.btnCircle.TabIndex = 2;
             this.btnCircle.Text = "circle";
             this.btnCircle.UseVisualStyleBackColor = true;
+            this.btnCircle.Click += new System.EventHandler(this.btnCircle_Click);
             // 
             // Form1
             // 
