@@ -6,6 +6,7 @@ namespace FiguresForms
         Thread thread2;
         Thread thread3;
         int shapesNumber = 0;
+        bool stop = false;
         public Form1()
         {
             InitializeComponent();
@@ -38,7 +39,8 @@ namespace FiguresForms
 
         public void TriangleThread()
         {
-            while (true)
+
+            while (true && stop == false)
             {
                 //Coordinates are reverse
                 Random random = new Random();
@@ -54,10 +56,11 @@ namespace FiguresForms
                 SetShapesNumber();
                 Thread.Sleep(2000);
             }
+
         }
         public void CircleThread()
         {
-            while (true)
+            while (true && stop == false)
             {
                 Random random = new Random();
                 Pen pen = new Pen(Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255)));
@@ -71,13 +74,11 @@ namespace FiguresForms
                 SetShapesNumber();
                 Thread.Sleep(4000);
             }
-
         }
 
         public void RectangleThread()
         {
-
-            while (true)
+            while (true && stop == false)
             {
                 Random random = new Random();
                 Pen pen = new Pen(Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255)));
@@ -92,12 +93,21 @@ namespace FiguresForms
                 Thread.Sleep(3000);
             }
 
-
-
         }
 
-
-
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            if (stop == false)
+            {
+                stop = true;
+                btnStop.Text = "Start";
+            }
+            else if (stop == true)
+            {
+                stop = false;
+                btnStop.Text = "Stop";
+            }
+        }
     }
 
 
