@@ -21,18 +21,21 @@ namespace FiguresForms
 
         private void btnRectangle_Click(object sender, EventArgs e)
         {
+            stop = false;
             thread1 = new Thread(RectangleThread);
             thread1.Start();
         }
 
         private void btnTriangle_Click(object sender, EventArgs e)
         {
+            stop = false;
             thread2 = new Thread(TriangleThread);
             thread2.Start();
         }
 
         private void btnCircle_Click(object sender, EventArgs e)
         {
+            stop = false;
             thread3 = new Thread(CircleThread);
             thread3.Start();
         }
@@ -102,17 +105,13 @@ namespace FiguresForms
             if (stop == false)
             {
                 stop = true;
-                btnStop.Text = "start";
-            }
-            else if (stop == true)
-            {
-                stop = false;
-                btnStop.Text = "stop";
             }
         }
 
         private void btnTheme_Click(object sender, EventArgs e)
         {
+            shapesNumber = 0;
+            SetShapesNumber();
             if (isWhiteTheme == true)
             {
                 btnCircle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))),

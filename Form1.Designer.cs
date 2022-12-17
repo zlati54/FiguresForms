@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnRectangle = new System.Windows.Forms.Button();
             this.btnTriangle = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.lblNumberOfFigures = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnTheme = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnRectangle
@@ -87,9 +89,9 @@
             this.lblNumberOfFigures.Location = new System.Drawing.Point(467, 465);
             this.lblNumberOfFigures.Name = "lblNumberOfFigures";
             this.lblNumberOfFigures.Padding = new System.Windows.Forms.Padding(1, 4, 4, 4);
-            this.lblNumberOfFigures.Size = new System.Drawing.Size(104, 23);
+            this.lblNumberOfFigures.Size = new System.Drawing.Size(113, 23);
             this.lblNumberOfFigures.TabIndex = 3;
-            this.lblNumberOfFigures.Text = "Rendered figures:";
+            this.lblNumberOfFigures.Text = "Rendered figures: 0";
             this.lblNumberOfFigures.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnStop
@@ -117,8 +119,15 @@
             this.btnTheme.Size = new System.Drawing.Size(91, 23);
             this.btnTheme.TabIndex = 5;
             this.btnTheme.Text = "dark theme";
+            this.toolTip1.SetToolTip(this.btnTheme, "switching the theme will reset the figures");
             this.btnTheme.UseVisualStyleBackColor = false;
             this.btnTheme.Click += new System.EventHandler(this.btnTheme_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 250;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // Form1
             // 
@@ -150,5 +159,6 @@
         private Label lblNumberOfFigures;
         private Button btnStop;
         private Button btnTheme;
+        private ToolTip toolTip1;
     }
 }
